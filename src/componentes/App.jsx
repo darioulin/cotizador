@@ -4,7 +4,7 @@ class App extends Component {
   render() {
     return (
       <div className="contenedor">
-        <Header />
+        <Header titulo="Cotizador de seguro de auto" />
       </div>
     );
   }
