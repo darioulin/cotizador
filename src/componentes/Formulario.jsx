@@ -9,12 +9,20 @@ class Formulario extends Component {
 
   cotizarSeguro = e => {
     e.preventDefault();
-    //Obtener los datos
 
+    // Leer el plan
+    const plan = this.planBasicoRef.current.checked ? "basico" : "completo";
+
+    //Obtener los datos
+    const infoAuto = {
+      marca: this.marcaRef.current.value,
+      year: this.yearRef.current.value,
+      plan: plan
+    };
     //Crear el objeto
 
     //Enviarlo al componente principal
-    console.log(this.marcaRef.current.value);
+    console.log(infoAuto);
   };
   render() {
     return (
