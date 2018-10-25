@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { primeraMayuscula } from "../helper";
 
 class Resumen extends Component {
-  render() {
+  mostrarResumen = () => {
     const { marca, year, plan } = this.props.datos;
     if (!marca || !year || !plan) return null;
     return (
@@ -13,6 +13,9 @@ class Resumen extends Component {
         <li>Plan: {primeraMayuscula(plan)}</li>
       </div>
     );
+  };
+  render() {
+    return <div>{this.mostrarResumen()}</div>;
   }
 }
 
