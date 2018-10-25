@@ -14,15 +14,15 @@ class Formulario extends Component {
     const plan = this.planBasicoRef.current.checked ? "basico" : "completo";
 
     //Obtener los datos
+    // console.log(this.marcaRef.current.value);
+    //Crear el objeto
     const infoAuto = {
       marca: this.marcaRef.current.value,
       year: this.yearRef.current.value,
       plan: plan
     };
-    //Crear el objeto
-
     //Enviarlo al componente principal
-    console.log(infoAuto);
+    this.props.cotizarSeguro(infoAuto);
   };
   render() {
     return (
